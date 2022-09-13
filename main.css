@@ -1,0 +1,48 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+:root{
+   --profileColor: hsl(235, 46%, 20%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+button{
+  all: unset;
+}
+body{
+   background: hsl(226, 43%, 10%);
+}
+main{
+   padding: 2em 1em;
+}
+.profile{
+
+}
+.profile-pig{
+   display: grid;
+   grid-template-rows: 1fr .3fr;
+   background: var(--profileColor);
+   border-radius: 1em;
+   gap: 1em;
+}
+.profile-pig img{
+   width: 100%;
+   border: 3px solid white ;
+   border-radius: 50% ;
+}
+.profile-coin{
+   color: white;
+   background: hsl(246, 80%, 60%);
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   gap: 1em;
+   padding: .5em 1em;
+   border-radius: 1em;
+}
+.time-buttons{
+   display: flex;
+   gap: 1em;
+   color: white;
+   justify-content: center;
+}

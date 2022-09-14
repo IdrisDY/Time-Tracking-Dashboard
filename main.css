@@ -12,13 +12,12 @@ button{
 }
 body{
    background: hsl(226, 43%, 10%);
+   font-weight: 18px;
 }
 main{
    padding: 2em 1em;
 }
-.profile{
 
-}
 .profile-pig{
    display: grid;
    grid-template-rows: 1fr .3fr;
@@ -27,8 +26,8 @@ main{
    gap: 1em;
 }
 .profile-pig img{
-   width: 100%;
-   border: 3px solid white ;
+   width: 80%;
+   border: 2px solid white ;
    border-radius: 50% ;
 }
 .profile-coin{
@@ -36,13 +35,22 @@ main{
    background: hsl(246, 80%, 60%);
    display: grid;
    grid-template-columns: 1fr 3fr;
-   gap: 1em;
-   padding: .5em 1em;
+   gap: .5em;
+   padding: 1.5em 1.5em;
    border-radius: 1em;
 }
 .time-buttons{
    display: flex;
    gap: 1em;
    color: white;
+   justify-content: space-around;
+   padding: .5em 1em 1em 1em;
+}
+.profile-text{
+   display: flex;
    justify-content: center;
+   flex-direction: column;
+}
+.profile-text h1{
+   font-size: 1.5rem;
 }

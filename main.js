@@ -11,10 +11,8 @@ const work =  document.createElement('span')
 const dayBtn =  document.querySelector('.dailybtn')
 const weekBtn =  document.querySelector('.weeklybtn')
 const monthBtn =  document.querySelector('.monthlybtn')
-let dailyClicked= false
-let weeklyClicked= false
-let monthlyClicked= false
-console.log(dailyClicked);
+const cards = document.querySelector('.cards')
+let timeClicked= 'monthly'
 
 
 const maindata =  fetch('data.json')
@@ -24,55 +22,18 @@ maindata.then(response=>response.json())
    {
    tasks = resp
 console.log(tasks);
-dayBtn.onclick = ()=>{
-   dailyClicked = true
-   weeklyClicked = false
-   monthlyClicked = false
-   console.log('deak');
-
-}
-weekBtn.onclick = ()=>{
-   weeklyClicked = true
-   dailyClicked = false
-   monthlyClicked = false
-console.log('weak');
-}
-monthBtn.onclick = ()=>{
-   monthlyClicked = true
-   weeklyClicked = false
-   dailyClicked = false
-   console.log('meak');
-
-}
-
 
 tasks.map((task,index)=>{
 const {title,timeframes}  = task
    const {daily,monthly,weekly} = timeframes
-
-   work.innerHTML = title
-   if(dailyClicked === true){
-      times.innerHTML= daily.current
-      console.log(times.innerHTML);
-
-   }
-   if(monthlyClicked === true){
-      times.innerHTML= monthly.current
-      console.log(times.innerHTML);
-
-   }
-   if(weeklyClicked === true){
-     times.innerHTML = weekly.current
-     console.log(times.innerHTML);
-
-   }
-     workTime.append(work,times)
-     previousTime.append(dots,prevs)
-     timeContent.append(workTime,previousTime)
-     container.appendChild(timeContent)
-
-     console.log(times.innerHTML);
-
+   workTime.append(work,times)
+   previousTime.append(dots,prevs)
+   timeContent.append(workTime,previousTime)
+   container.appendChild(timeContent)
+   
+   return   (
+      cards.append(container)
+   )
 
 })
 

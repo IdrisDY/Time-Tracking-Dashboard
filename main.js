@@ -29,8 +29,9 @@ const {title,timeframes}  = task
    workTime.append(work,times)
    previousTime.append(dots,prevs)
    timeContent.append(workTime,previousTime)
+
    container.appendChild(timeContent)
-   
+   console.log('tired of work');
    return   (
       cards.append(container)
    )

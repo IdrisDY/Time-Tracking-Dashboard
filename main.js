@@ -26,16 +26,14 @@ console.log(tasks);
 tasks.map((task,index)=>{
 const {title,timeframes}  = task
    const {daily,monthly,weekly} = timeframes
+work.innerText= monthly.previous
+   console.log('tired of work');
    workTime.append(work,times)
    previousTime.append(dots,prevs)
    timeContent.append(workTime,previousTime)
-
    container.appendChild(timeContent)
-   console.log('tired of work');
-   return   (
+   
       cards.append(container)
-   )
-
 })
 
 }

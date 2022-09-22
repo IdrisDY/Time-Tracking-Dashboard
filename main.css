@@ -54,3 +54,27 @@ main{
 .profile-text h1{
    font-size: 1.5rem;
 }
+.cardContainer{
+   color: white;
+}
+.cards{
+   margin-top: 2em;
+display: grid;
+grid-template-rows: repeat(6,1fr);
+gap: 1em;
+}
+.card-coin{
+   height: 80%;
+   display: flex;
+   justify-content: space-around;
+   padding: 2em 3em;
+   background-color: var(--profileColor);
+}
+#text{
+   display: hidden;
+}
+.cardtitle{
+   display: flex;
+   flex-direction: column;
+   gap: .5em;
+}

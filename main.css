@@ -56,12 +56,13 @@ main{
 }
 .cardContainer{
    color: white;
+   background-size: contain;
+   background-repeat: no-repeat;
 }
 .cards{
    margin-top: 2em;
 display: grid;
-grid-template-rows: repeat(6,1fr);
-gap: 1em;
+gap: 2em;
 }
 .card-coin{
    height: 80%;

@@ -1,5 +1,4 @@
 
-
 const container = document.createElement('div')
 const timeContent = document.createElement('div')
 const workTime  = document.createElement('div')
@@ -22,13 +21,18 @@ maindata.then(response=>response.json())
    {
    tasks = resp
 console.log(tasks);
+
+const imgArray = [ 'images/icon-ellipsis.svg','images/icon-exercise.svg', 'images/icon-play.svg','images/icon-self-care.svg', 'images/icon-social.svg','images/icon-study.svg','images/icon-work.svg']
+console.log(imgArray);
+  const theRay = imgArray.map(img=>  console.log(img) )
 weekBtn.onclick = ()=> 
 {
+
   const newArray = tasks.map( task=>{
-    const {title,timeframes} = task
+    const {title,timeframes,image,bgcolor} = task
     const { daily,monthly,weekly} = timeframes
  return(
-    `  <div class='cardContainer'>
+    `  <div class='cardContainer' style= 'backgroundColor:${bgcolor}'>
     <div class='card-coin'>
       <div class='cardtitle'>
         <span> ${title}</span>
@@ -74,7 +78,6 @@ dayBtn.onclick = ()=>
  cards.innerHTML = newArray;
  
 }
-const newp  = document.createElement('p')
 monthBtn.onclick = ()=>
  {
   const newArray = tasks.map( task=>{
@@ -104,27 +107,20 @@ monthBtn.onclick = ()=>
 
  }
 
-console.log(timeClicked);
-
 const newArray = tasks.map( task=>{
 
    const {title,timeframes} = task
    const { daily,monthly,weekly} = timeframes
 return(
-     `<div class='cardContainer'>
-   <div class='card-coin'>
-     <div>
-       <span> ${title}</span>
-       <span> ${daily.current}hrs</span>
+     `<div class='cardContainer'  ><div class='card-coin'><div>
+     <span>${title}</span>
+     <span> ${daily.current}hrs</span>
      </div>
      <div>
-       <span></span>
-       <span>Yesterday-${daily.previous}hrs</span>
-     </div>
-   </div>
- </div>
-`
-)
+     <span></span>
+     <span>Yesterday-${daily.previous}hrs</span></div></div></div>`
+ 
+ )
 
   
 }

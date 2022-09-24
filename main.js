@@ -15,18 +15,16 @@ let timeClicked= 'daily'
 
 
 const maindata =  fetch('data.json')
-var tasks
 maindata.then(response=>response.json())  
 .then(resp=> 
    {
-   tasks = resp
-console.log(tasks);
-
-const imgArray = [ 'images/icon-ellipsis.svg','images/icon-exercise.svg', 'images/icon-play.svg','images/icon-self-care.svg', 'images/icon-social.svg','images/icon-study.svg','images/icon-work.svg']
-console.log(imgArray);
-  const theRay = imgArray.map(img=>  console.log(img) )
+   let tasks = resp
+   
 weekBtn.onclick = ()=> 
 {
+weekBtn.classList.add('btnclick')
+dayBtn.classList.remove('btnclick')
+monthBtn.classList.remove('btnclick')
 
   const newArray = tasks.map( task=>{
     const {title,timeframes,image,bgcolor} = task
@@ -56,6 +54,10 @@ weekBtn.onclick = ()=>
 }
 dayBtn.onclick = ()=> 
 {
+  dayBtn.classList.add('btnclick')
+  weekBtn.classList.remove('btnclick')
+  monthBtn.classList.remove('btnclick')
+
   const newArray = tasks.map( task=>{
     const {title,timeframes,image,bgcolor} = task
     const { daily} = timeframes
@@ -84,6 +86,11 @@ dayBtn.onclick = ()=>
 }
 monthBtn.onclick = ()=>
  {
+  monthBtn.classList.add('btnclick')
+  weekBtn.classList.remove('btnclick')
+  dayBtn.classList.remove('btnclick')
+
+
   const newArray = tasks.map( task=>{
     const {title,timeframes,image,bgcolor} = task
     const { daily,monthly,weekly} = timeframes
@@ -112,6 +119,10 @@ monthBtn.onclick = ()=>
  cards.innerHTML = newArray;
 
  }
+
+ dayBtn.classList.add('btnclick')
+ weekBtn.classList.remove('btnclick')
+ monthBtn.classList.remove('btnclick')
 
 const newArray = tasks.map( task=>{
 

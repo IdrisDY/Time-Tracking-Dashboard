@@ -4,11 +4,13 @@
 }
 :root{
    --profileColor: hsl(235, 46%, 20%);
+   font-family: 'Rubik',sans-serif;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 button{
   all: unset;
+  cursor: pointer;
 }
 body{
    background: hsl(226, 43%, 10%);
@@ -49,9 +51,16 @@ main{
 .time-buttons{
    display: flex;
    gap: 1em;
-   color: white;
+   color: rgba(255, 255, 255, 0.6);
    justify-content: space-around;
    padding: .5em 1em 1em 1em;
+}
+.btnclick{
+   color: white;
+}
+.time-buttons button{
+   font-weight: lighter;
+   
 }
 .profile-text{
    display: flex;
@@ -60,6 +69,7 @@ main{
 }
 .profile-text h1{
    font-size: 1.5rem;
+   font-weight: 300;
 }
 .cardContainer{
    color: white;
@@ -84,11 +94,6 @@ gap: .5em;
 #text{
    display: hidden;
 }
-.cardtitle{
-   display: flex;
-   flex-direction: column;
-   gap: .5em;
-}
 .span-content{
    display: flex;
    flex-direction: column;
@@ -105,7 +110,7 @@ gap: .5em;
       height: 100vh;
    }
 main{
-   grid-template-columns: 1fr 3.5fr;
+   grid-template-columns: .8fr 3.5fr;
 width: 80%;
 margin: 0 auto;
 gap: 2em;
@@ -129,9 +134,20 @@ max-width: 100%;
 .time-buttons{
    flex-direction: column;
    gap: .3em;
+   
 }
 .profile-coin{
 display: flex;
 flex-direction: column;
+padding: 2em 1.5em 0em 1em;
+align-items: flex-start;
+justify-content: flex-start;
+}
+.profile-coin img{
+   width: 30%;
+}
+.profile-text h1{
+   font-size: 1.8rem;
+   font-weight: 100;
 }
 }

@@ -83,11 +83,11 @@ display: grid;
 gap: .5em;
 }
 .card-coin{
-   height: 40%;
+   height: 35%;
    width: 100%;
    display: flex;
    justify-content: space-between;
-   padding: 1em 1.5em;
+   padding: 1.3em 1.5em;
    background-color: var(--profileColor);
    border-radius: .4em;
 }

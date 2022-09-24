@@ -30,16 +30,18 @@ weekBtn.onclick = ()=>
 
   const newArray = tasks.map( task=>{
     const {title,timeframes,image,bgcolor} = task
-    const { daily,monthly,weekly} = timeframes
+    const {weekly} = timeframes
  return(
-    `  <div class='cardContainer' style= 'backgroundColor:${bgcolor}'>
+    `  <div class='cardContainer'
+     style= 'background:${bgcolor};background-image: url(${image}); background-repeat: no-repeat;background-position: right;background-position-y:-1em;' 
+     >
     <div class='card-coin'>
-      <div class='cardtitle'>
+      <div class='span-content''>
         <span> ${title}</span>
         <span> ${weekly.current}hrs</span>
       </div>
-      <div>
-        <span></span>
+      <div class='span-content'>
+        <span class='dots'>...</span>
         <span>Last Week -${weekly.previous}hrs</span>
       </div>
     </div>
@@ -55,17 +57,19 @@ weekBtn.onclick = ()=>
 dayBtn.onclick = ()=> 
 {
   const newArray = tasks.map( task=>{
-    const {title,timeframes} = task
+    const {title,timeframes,image,bgcolor} = task
     const { daily} = timeframes
  return(
-    `  <div class='cardContainer'>
+    `  <div class='cardContainer'
+    style= 'background:${bgcolor};background-image: url(${image}); background-repeat: no-repeat;background-position: right;background-position-y:-1em;' 
+    >
     <div class='card-coin'>
-      <div>
+      <div class='span-content'>
         <span> ${title}</span>
         <span> ${daily.current}hrs</span>
       </div>
-      <div>
-        <span></span>
+      <div class='span-content'>
+        <span class='dots'>...</span>
         <span>Yesterday -${daily.previous}hrs</span>
       </div>
     </div>
@@ -81,18 +85,20 @@ dayBtn.onclick = ()=>
 monthBtn.onclick = ()=>
  {
   const newArray = tasks.map( task=>{
-    const {title,timeframes} = task
+    const {title,timeframes,image,bgcolor} = task
     const { daily,monthly,weekly} = timeframes
  return(
-    `  <div class='cardContainer'>
+    `  <div class='cardContainer'
+    style= 'background:${bgcolor};background-image: url(${image}); background-repeat: no-repeat;background-position: right;background-position-y:-1em;' 
+    >
     <div class='card-coin'>
-      <div>
+      <div class='span-content'>
      
         <span> ${title}</span>
         <span> ${monthly.current}hrs</span>
       </div>
-      <div>
-        <span></span>
+      <div class='span-content'>
+        <span class='dots'>...</span>
         <span>Last Month -${monthly.previous}hrs</span>
       </div>
     </div>
@@ -109,15 +115,19 @@ monthBtn.onclick = ()=>
 
 const newArray = tasks.map( task=>{
 
-   const {title,timeframes} = task
-   const { daily,monthly,weekly} = timeframes
+   const {title,timeframes,image,bgcolor} = task
+   const { daily} = timeframes
 return(
-     `<div class='cardContainer'  ><div class='card-coin'><div>
+     `<div class='cardContainer'
+     style= 'background:${bgcolor};background-image: url(${image}); background-repeat: no-repeat;background-position: right;background-position-y:-1em;' 
+     >
+     <div class='card-coin'>
+     <div class='span-content'>
      <span>${title}</span>
      <span> ${daily.current}hrs</span>
      </div>
-     <div>
-     <span></span>
+     <div class='span-content'>
+     <span class='dots'>...</span>
      <span>Yesterday-${daily.previous}hrs</span></div></div></div>`
  
  )
